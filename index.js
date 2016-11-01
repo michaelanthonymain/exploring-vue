@@ -35,3 +35,14 @@ var app6 = new Vue({
         message: 'Hello Vue!'
     }
 });
+
+var data = { a: 1 };
+
+var vm = new Vue({
+    el: '#example',
+    data: data
+});
+
+vm.$watch('a', function (newVal, oldVal) {
+    console.log('changed!');
+});
